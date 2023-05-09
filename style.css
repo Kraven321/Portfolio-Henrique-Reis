@@ -14,13 +14,24 @@ body{
 }
 header{
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     min-height: 1rem;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     background-color: #2f2f46;
- 
+    transition: background-color 0.3s ease-in-out;
+    z-index: 999;
 }
+header.scrolled {
+    background-color: #34344e;
+    opacity: 0.9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
 header img{
     height: 7rem;
 
@@ -53,6 +64,25 @@ header nav ul a:hover{
 .btn-actions:hover{
     background-color: transparent;
 }
+.cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 1em;
+    margin-left: 2px;
+    background-color: #000;
+    animation: cursor 1s infinite;
+  }
+  
+  @keyframes cursor {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
 
 main{
     display: flex;
@@ -71,6 +101,7 @@ section{
     min-height: 500px;
     
 }
+
 .hero-text{
     display: flex;
     flex-direction: column;
@@ -99,6 +130,86 @@ strong{
 }
 .img-profile{
     border-radius: 50%;
-    width: 27rem;
-    height: 30rem;
+    width: 21rem;
+    height: 23rem;
+    border: 10px solid #9536ca;
+    transition: transform 0.3s ease-out;
+}
+.img-profile:hover{
+    transform: translate(20px, 20px);
+}
+:is(.skills,.projects){
+    background-color: #3a415a ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.title{
+    color: #cbdad5;
+}
+.skills ul{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills ul p{
+    color: #89a7b1;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: .4s ease-out;
+    cursor: pointer;
+}
+.skills ul p:hover{
+    color: #cbdad5;
+}
+.who-i{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.who-i > div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.who-i > div img{
+    width: 300px;
+    border-radius: 10px;
+    border: 10px solid #9536ca;
+    transition: transform 0.3s ease-out;
+}
+.who-i > div img:hover{
+    transform: translate(-20px, 20px);
+}
+.who-i > div p{
+    max-width: 600px;
+    color: white;
+    text-align: justify;
+    font-size: 19px;
+}
+footer{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+footer > div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+}
+footer a{
+    color: white;
+    transition: .3s ease
+}
+footer a:hover{
+    color: #9536CA;
 }
