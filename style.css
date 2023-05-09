@@ -213,3 +213,16 @@ footer a{
 footer a:hover{
     color: #9536CA;
 }
+#my-projects-list{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+#my-projects-list a{
+    color: #566981;
+}
+#my-projects-list a:hover{
+    color: #cbdad5;
+    transition: .4s;
+    cursor: pointer;
+}
